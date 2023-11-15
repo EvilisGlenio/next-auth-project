@@ -3,6 +3,7 @@ import GoogleProvider from "next-auth/providers/google"
 
 // essa const é necessária, pois não será usado apenas do lado do cliente
 export const authOption = {
+    secret: process.env.NEXTAUTH_SECRET,
     providers: [
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID,
